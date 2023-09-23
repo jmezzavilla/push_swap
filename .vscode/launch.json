@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/push_swap", // Substitua pelo nome do seu executável
+            "args": ["96 2 47 36 37 39 62 7 95 36 79 2 50 50 37 38 38 34 70 62 52 80 14 41 23 71 16 44 49 89 42 20 63 11 19 99 81 99 96 48 81 7 67 15 58 19 23 71 76 16 86 72 85 9 64 51 70 93 11 48 66 4 56 53 28 73 16 6 79 3 7 3 62 14 53 61 20 8 15 4 1 56 25 50 37 30 18 67 21 74 99 33 40 26 24 46 92 21 100 66"],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "make",
+            "miDebuggerPath": "/usr/bin/gdb" // Caminho para o gdb (depende do seu sistema)
+        }
+    ]
+}

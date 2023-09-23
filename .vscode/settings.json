@@ -1,0 +1,13 @@
+{
+    "files.associations": {
+        "push_swap.h": "c",
+        "random": "c",
+        "libft.h": "c",
+        "chrono": "c",
+        "fcntl.h": "c",
+        "array": "c",
+        "string_view": "c",
+        "initializer_list": "c",
+        "utility": "c"
+    }
+}
