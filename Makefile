@@ -6,16 +6,18 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/24 01:20:04 by jealves-         ###   ########.fr        #
+#    Updated: 2023/09/24 17:43:06 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC =		src/command/push.c\
-			src/command/reverse_rotate.c\
-			src/command/rotate.c\
-			src/command/swap.c
+SRC =	src/push_swap.c \
+		src/moves/swap.c \
+		src/moves/rotate.c \
+		src/moves/reverse_rotate.c \
+		src/moves/push.c \
+		src/util/stacks.c \
 			
 PROJECT = <$(GREEN)$(NAME)$(RESET)>
 			
