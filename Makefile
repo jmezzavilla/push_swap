@@ -6,17 +6,16 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/23 16:51:13 by jealves-         ###   ########.fr        #
+#    Updated: 2023/09/24 01:20:04 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-SRC =		src/main.c\
-			src/command/swap_stack.c\
-			src/command/send_element_between_stack.c\
-			src/command/swift_element_stack.c\
-			src/command/swift_reverse_element_stack.c\
+SRC =		src/command/push.c\
+			src/command/reverse_rotate.c\
+			src/command/rotate.c\
+			src/command/swap.c
 			
 PROJECT = <$(GREEN)$(NAME)$(RESET)>
 			
