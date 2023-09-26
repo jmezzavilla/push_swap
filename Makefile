@@ -6,7 +6,7 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/24 17:43:06 by jealves-         ###   ########.fr        #
+#    Updated: 2023/09/25 23:41:49 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,11 +18,14 @@ SRC =	src/push_swap.c \
 		src/moves/reverse_rotate.c \
 		src/moves/push.c \
 		src/util/stacks.c \
-			
+		src/util/msg.c \
+		src/util/validate.c \
+		src/sorts/sort.c \
+		src/sorts/sort_2nbrs.c \
+	
 PROJECT = <$(GREEN)$(NAME)$(RESET)>
 			
 INCLUDES = include
-
 
 DIR_LIBFT = libft
 INCLUDE_LIB = $(DIR_LIBFT)/include

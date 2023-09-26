@@ -6,30 +6,29 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:23:15 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/24 18:46:06 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:28:35 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int main(int ac, char **av)
+int	main(int ac, char **av)
 {
-    t_list *list_a;
-    t_list *list_b;
+	t_list	*list_a;
+	t_list	*list_b;
+	t_item	*item;
 
-    list_a = NULL;
-    list_b = NULL;
-
-	create_by_str(av[1], &list_a);
-	
+	list_a = NULL;
+	list_b = NULL;
+	check_args(ac, av);
+	create_by_str(av, &list_a);
 	check_sort(list_a);
-
-	while(list_a)
+	sort(&list_a, &list_b);
+	while (list_a)
 	{
-		t_item *item = list_a->content;
-		list_a = list_a->next;	
+		item = list_a->content;
+		msg(ft_itoa(item->nbr));
+		list_a = list_a->next;
 	}
-    return (0);
-	
-	
+	return (0);
 }

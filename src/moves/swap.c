@@ -6,13 +6,13 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 20:53:50 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/24 15:44:24 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/26 15:29:02 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void swap(t_list *stack)
+void	swap(t_list *stack)
 {
-    ft_swap_mem(&stack->content, &stack->next->content, 1);
+	ft_swap_mem(&stack->content, &stack->next->content, 1);
 }

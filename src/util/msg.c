@@ -1,23 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   msg.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 21:07:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/26 15:28:23 by jealves-         ###   ########.fr       */
+/*   Created: 2023/09/25 22:18:02 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/25 22:19:52 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*reverse_rotate(t_list *stack)
+void	error_msg(const char *message)
 {
-	t_list	*current;
+	ft_printf("%s\n", message);
+	exit(EXIT_FAILURE);
+}
 
-	current = ft_lstlast(stack);
-	ft_lstadd_front(&stack, ft_lstnew(current->content));
-	ft_lstdellast(&stack);
-	return (stack);
+void	msg(const char *message)
+{
+	ft_printf("%s\n", message);
 }

@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   sort.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 21:07:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/26 15:28:23 by jealves-         ###   ########.fr       */
+/*   Created: 2023/09/25 23:41:28 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/26 15:27:48 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_list	*reverse_rotate(t_list *stack)
+void	sort(t_list **lst_a, t_list **b)
 {
-	t_list	*current;
-
-	current = ft_lstlast(stack);
-	ft_lstadd_front(&stack, ft_lstnew(current->content));
-	ft_lstdellast(&stack);
-	return (stack);
+	if (ft_lstsize(*lst_a) == 2)
+		sort_2nbrs(lst_a);
 }
