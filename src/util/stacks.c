@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:42:36 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/26 15:28:16 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/27 12:48:34 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	create_by_str(char **str, t_list **lst)
 	i = 1;
 	while (str[i])
 	{
-		if (!lst)
+		if (!*lst)
 		{
 			*lst = ft_lstnew(create_item(ft_atoi(str[i])));
 		}

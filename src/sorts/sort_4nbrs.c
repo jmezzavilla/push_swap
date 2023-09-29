@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   reverse_rotate.c                                   :+:      :+:    :+:   */
+/*   sort_4nbrs.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/20 21:07:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/26 15:58:30 by jealves-         ###   ########.fr       */
+/*   Created: 2023/09/26 21:51:17 by jealves-          #+#    #+#             */
+/*   Updated: 2023/09/27 12:13:40 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "push_swap.h"
 
-void	reverse_rotate(t_list **stack)
+void	sort_4nbrs(t_list **lst_a, t_list **lst_b)
 {
-	t_list	*current;
-
-	current = ft_lstlast(*stack);
-	ft_lstadd_front(stack, ft_lstnew(current->content));
-	ft_lstdellast(stack);
+	rotate_low_value(lst_a);
+	push(lst_a, lst_b);
+	sort_3nbrs(lst_a);
+	push(lst_b, lst_a);
 }

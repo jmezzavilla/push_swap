@@ -6,7 +6,7 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/25 23:41:49 by jealves-         ###   ########.fr        #
+#    Updated: 2023/09/26 21:55:05 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,11 @@ SRC =	src/push_swap.c \
 		src/util/validate.c \
 		src/sorts/sort.c \
 		src/sorts/sort_2nbrs.c \
-	
+		src/sorts/sort_3nbrs.c \
+		src/sorts/sort_4nbrs.c \
+		src/sorts/sort_5nbrs.c \
+		src/util/util.c \
+		
 PROJECT = <$(GREEN)$(NAME)$(RESET)>
 			
 INCLUDES = include

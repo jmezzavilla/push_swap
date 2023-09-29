@@ -6,13 +6,13 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 23:36:52 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/26 15:27:37 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/26 22:07:17 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_2nbrs(t_list **lst)
+void	sort_2nbrs(t_list **lst_a)
 {
-	swap(*lst);
+	swap(lst_a);
 }
