@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 23:41:28 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 11:03:21 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 11:25:52 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,17 +47,17 @@ void	sort_3nbrs(t_list **lst_a)
 void	sort_4nbrs(t_list **lst_a, t_list **lst_b)
 {
 	rotate_low_value(lst_a);
-	pa(lst_a, lst_b);
+	pb(lst_a, lst_b);
 	sort_3nbrs(lst_a);
-	pb(lst_b, lst_a);
+	pa(lst_b, lst_a);
 }
 
 void	sort_5nbrs(t_list **lst_a, t_list **lst_b)
 {
 	rotate_low_value(lst_a);
-	pa(lst_a, lst_b);
+	pb(lst_a, lst_b);
 	sort_4nbrs(lst_a, lst_b);
-	pb(lst_b, lst_a);
+	pa(lst_b, lst_a);
 }
 
 void	sort(t_list **lst_a, t_list **lst_b)

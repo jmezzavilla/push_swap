@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:05:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:39:36 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 11:30:24 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	do_sort(t_list **lst_a, t_list **lst_b)
 			rotate_to_top(lst_b, item->nbr, 2);
 		if (item->cost_bf > 0)
 			rotate_to_top(lst_a, item->bf, 1);
-		pb(lst_b, lst_a);
+		pa(lst_b, lst_a);
 	}
 	rotate_low_value(lst_a);
 }
@@ -76,7 +76,7 @@ void	sort_nbrs(t_list **lst_a, t_list **lst_b)
 	{
 		item = (*lst_a)->content;
 		if (item->nbr < average(*lst_a))
-			pa(lst_a, lst_b);
+			pb(lst_a, lst_b);
 		else
 			ra(lst_a);
 	}
