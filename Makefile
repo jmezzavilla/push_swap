@@ -6,7 +6,7 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/29 19:32:13 by jealves-         ###   ########.fr        #
+#    Updated: 2023/09/30 10:21:42 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,8 @@ SRC =	src/push_swap.c \
 		src/util/validate.c \
 		src/sorts/sort.c \
 		src/sorts/sort_nbrs.c \
-		src/sorts/sort_2nbrs.c \
-		src/sorts/sort_3nbrs.c \
-		src/sorts/sort_4nbrs.c \
-		src/sorts/sort_5nbrs.c \
 		src/util/util.c \
+		src/util/clean.c\
 		
 PROJECT = <$(GREEN)$(NAME)$(RESET)>
 			
@@ -36,7 +33,7 @@ DIR_LIBFT = libft
 INCLUDE_LIB = $(DIR_LIBFT)/include
 LIB = $(DIR_LIBFT)/libft.a
 
-CFLAGS = -g -Wall -I $(INCLUDES) -I $(INCLUDE_LIB) -Wextra # -Werror  
+CFLAGS = -g -Wall -I $(INCLUDES) -I $(INCLUDE_LIB) -Wextra -Werror #-fsanitize=address
 RM= rm -rf
 
 OBJ = $(patsubst %.c,%.o,$(SRC))

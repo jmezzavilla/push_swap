@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 21:07:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/29 22:49:52 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 10:26:46 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,21 +20,22 @@ void	reverse_rotate(t_list **stack)
 	ft_lstadd_front(stack, ft_lstnew(current->content));
 	ft_lstdellast(stack);
 }
-void rra(t_list **lst)
+
+void	rra(t_list **lst)
 {
-	ft_printf("rra\n");
+	msg("rra");
 	reverse_rotate(lst);
 }
 
-void rrb(t_list **lst)
+void	rrb(t_list **lst)
 {
-	ft_printf("rrb\n");
+	msg("rrb");
 	reverse_rotate(lst);
 }
 
-void rrr(t_list **lst_a, t_list **lst_b)
+void	rrr(t_list **lst_a, t_list **lst_b)
 {
-	ft_printf("rrr\n");
+	msg("rrr");
 	reverse_rotate(lst_a);
 	reverse_rotate(lst_b);
 }

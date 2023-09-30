@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:35:07 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/29 22:58:12 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 10:22:23 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "libft.h"
-#include <limits.h>
+# include <limits.h>
 
 typedef struct s_item
 {
@@ -25,21 +25,20 @@ typedef struct s_item
 	int	nbr;
 }		t_item;
 
-///moves///
-void pa(t_list **lst_a, t_list **lst_b);
-void pb(t_list **lst_b, t_list **lst_a);
-void rra(t_list **lst);
-void rrb(t_list **lst);
-void rrr(t_list **lst_a, t_list **lst_b);
-void ra(t_list **lst);
-void rb(t_list **lst);
-void rr(t_list **lst_a, t_list **lst_b);
-void sa(t_list **lst);
-void sb(t_list **lst);
-void ss(t_list **lst_a, t_list **lst_b);
+/// moves///
+void	pa(t_list **lst_a, t_list **lst_b);
+void	pb(t_list **lst_b, t_list **lst_a);
+void	rra(t_list **lst);
+void	rrb(t_list **lst);
+void	rrr(t_list **lst_a, t_list **lst_b);
+void	ra(t_list **lst);
+void	rb(t_list **lst);
+void	rr(t_list **lst_a, t_list **lst_b);
+void	sa(t_list **lst);
+void	sb(t_list **lst);
+void	ss(t_list **lst_a, t_list **lst_b);
 
-
-///utils///
+/// utils///
 void	create_by_str(char **str, t_list **lst);
 void	check_sort(t_list *lst);
 void	check_args(int ac, char **av);
@@ -48,12 +47,13 @@ int		find_cost(t_list **lst, int nbr);
 int		find_lowest_value(t_list *lst);
 t_item	*lowest_cost(t_list *lst);
 int		get_index_item(t_list *lst, int nbr);
+void	clean_lst(void *content);
 
-///msg///
+/// msg///
 void	msg(const char *message);
 void	error_msg(const char *message);
 
-///sorts///
+/// sorts///
 void	rotate_low_value(t_list **lst);
 void	rotate_to_top(t_list **lst, int nbr, int typ_lst);
 void	sort(t_list **a, t_list **b);

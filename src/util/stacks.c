@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:42:36 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/29 22:57:47 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 10:28:59 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	check_sort(t_list *lst)
 			return ;
 		temp_lst = temp_lst->next;
 	}
+	ft_lstclear(&lst, clean_lst);
 	exit(EXIT_SUCCESS);
 }
 
@@ -79,19 +80,18 @@ void	rotate_low_value(t_list **lst)
 	}
 }
 
-void rotate_to_top(t_list **lst, int nbr, int typ_lst)
+void	rotate_to_top(t_list **lst, int nbr, int typ_lst)
 {
-	int index;
+	int	index;
 
 	index = get_index_item(*lst, nbr);
-
-	if(index > (ft_lstsize(*lst) / 2))
+	if (index > (ft_lstsize(*lst) / 2))
 	{
 		while (index < ft_lstsize(*lst))
 		{
-			if(typ_lst == 1)
+			if (typ_lst == 1)
 				rra(lst);
-			else if(typ_lst == 2)
+			else if (typ_lst == 2)
 				rrb(lst);
 			index++;
 		}
@@ -100,9 +100,9 @@ void rotate_to_top(t_list **lst, int nbr, int typ_lst)
 	{
 		while (index)
 		{
-			if(typ_lst == 1)
+			if (typ_lst == 1)
 				ra(lst);
-			else if(typ_lst == 2)
+			else if (typ_lst == 2)
 				rb(lst);
 			index--;
 		}

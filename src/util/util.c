@@ -6,26 +6,27 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:54:38 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/29 21:38:36 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 10:11:03 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_item *lowest_cost(t_list *lst)
+t_item	*lowest_cost(t_list *lst)
 {
-	t_item *item_lowest;
-	t_item *item;
+	t_item	*item_lowest;
+	t_item	*item;
 
 	item_lowest = lst->content;
-	while(lst)
+	while (lst)
 	{
 		item = lst->content;
-		if((item->cost + item->cost_bf) < (item_lowest->cost + item_lowest->cost_bf))
+		if ((item->cost + item->cost_bf) < (item_lowest->cost
+				+ item_lowest->cost_bf))
 			item_lowest = item;
-		lst = lst->next;	
+		lst = lst->next;
 	}
-	return(item_lowest);
+	return (item_lowest);
 }
 
 int	get_index_item(t_list *lst, int nbr)
