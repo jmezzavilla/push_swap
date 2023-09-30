@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 23:41:28 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:10:46 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 11:03:21 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	sort_3nbrs(t_list **lst_a)
 	}
 	else if (n1->nbr < n2->nbr && n1->nbr > n3->nbr)
 		rra(lst_a);
-	else if (n1->nbr > n2->nbr && n3->nbr > n2->nbr)
+	else if (n1->nbr > n2->nbr && n3->nbr > n2->nbr && n3->nbr < n1->nbr)
 		ra(lst_a);
 	else if (n1->nbr < n2->nbr && n2->nbr > n3->nbr)
 	{
