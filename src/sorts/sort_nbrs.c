@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:05:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:10:39 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 10:39:36 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,6 @@ void	get_bf(t_list **lst_a, t_list **lst_b)
 void	do_sort(t_list **lst_a, t_list **lst_b)
 {
 	t_item	*item;
-	t_item	*last_item;
 
 	while (*lst_b)
 	{
@@ -66,15 +65,7 @@ void	do_sort(t_list **lst_a, t_list **lst_b)
 			rotate_to_top(lst_a, item->bf, 1);
 		pb(lst_b, lst_a);
 	}
-	while (1)
-	{
-		item = (*lst_a)->content;
-		last_item = ft_lstlast(*lst_a)->content;
-		if (item->nbr > last_item->nbr)
-			ra(lst_a);
-		else
-			break ;
-	}
+	rotate_low_value(lst_a);
 }
 
 void	sort_nbrs(t_list **lst_a, t_list **lst_b)

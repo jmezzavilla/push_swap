@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:42:36 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:28:59 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 10:41:18 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ t_item	*create_item(int nbr)
 {
 	t_item	*item;
 
-	item = ft_calloc(sizeof(item), 1);
+	item = ft_calloc(sizeof(t_item), 1);
 	item->nbr = nbr;
 	return (item);
 }
