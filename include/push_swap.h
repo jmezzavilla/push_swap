@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:35:07 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 15:33:18 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:33:18 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	sb(t_list **lst);
 void	ss(t_list **lst_a, t_list **lst_b);
 
 /// utils///
-void	create_by_str(char **str, t_list **lst);
+void	create_stack(char **str, t_list **lst);
 void	check_sort(t_list *lst);
 void	check_args(int ac, char **av);
 float	average(t_list *lst);

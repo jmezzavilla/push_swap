@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:42:36 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 15:23:56 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 16:33:57 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_item	*create_item(int nbr)
 	return (item);
 }
 
-void	create_by_str(char **str, t_list **lst)
+void	create_stack(char **str, t_list **lst)
 {
 	int	i;
 
@@ -29,9 +29,7 @@ void	create_by_str(char **str, t_list **lst)
 	while (str[i])
 	{
 		if (!*lst)
-		{
 			*lst = ft_lstnew(create_item(ft_atoi(str[i])));
-		}
 		else
 			ft_lstadd_back(lst, ft_lstnew(create_item(ft_atoi(str[i]))));
 		i++;
