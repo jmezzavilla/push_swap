@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:42:36 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:41:18 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:23:56 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ void	rotate_low_value(t_list **lst)
 	int	low;
 
 	low = find_lowest_value(*lst);
-	if (low >= (ft_lstsize(*lst) / 2))
+	if (low > (ft_lstsize(*lst) / 2))
 	{
 		while (low < ft_lstsize(*lst))
 		{
