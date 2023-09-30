@@ -6,7 +6,7 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/26 21:55:05 by jealves-         ###   ########.fr        #
+#    Updated: 2023/09/29 19:32:13 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRC =	src/push_swap.c \
 		src/util/msg.c \
 		src/util/validate.c \
 		src/sorts/sort.c \
+		src/sorts/sort_nbrs.c \
 		src/sorts/sort_2nbrs.c \
 		src/sorts/sort_3nbrs.c \
 		src/sorts/sort_4nbrs.c \

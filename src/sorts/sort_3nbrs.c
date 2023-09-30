@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 15:37:04 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/27 12:57:36 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/29 22:54:36 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@ void	sort_3nbrs(t_list **lst_a)
 	
 	if(n1->nbr > n2->nbr && n2->nbr > n3->nbr)
 	{
-		rotate(lst_a);
-		swap(lst_a);
+		ra(lst_a);
+		sa(lst_a);
 	}
 	else if(n1->nbr < n2->nbr && n1->nbr > n3->nbr)
-		reverse_rotate(lst_a);
+		rra(lst_a);
 	else if(n1->nbr > n2->nbr && n3->nbr > n2->nbr)
-		rotate(lst_a);
+		ra(lst_a);
 	else if(n1->nbr < n2->nbr && n2->nbr > n3->nbr)
 	{
-		swap(lst_a);
-		rotate(lst_a);
+		sa(lst_a);
+		ra(lst_a);
 	}
 	else if(n1->nbr > n2->nbr && n1->nbr < n3->nbr)
-		swap(lst_a);
+		sa(lst_a);
 }
