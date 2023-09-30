@@ -6,7 +6,7 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/30 11:33:38 by jealves-         ###   ########.fr        #
+#    Updated: 2023/09/30 15:48:55 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ lib :
 
 $(NAME) : lib $(OBJ) $(LIB)
 	@$(CC) $(CFLAGS) $(OBJ) $(LIB) -o $(NAME)
-	@printf "$(PROJECT) $(RED)compiled$(RESET)!\n"
+	@printf "$(PROJECT) $(GREEN)compiled$(RESET)!\n"
 
 
 $(MLX_LIB):

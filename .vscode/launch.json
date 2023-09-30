@@ -6,7 +6,7 @@
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/push_swap", // Substitua pelo nome do seu executável
-            "args": ["4", "67", "3" ,"87" ,"23"],
+            "args": ["4", "67", "35436374364092683464323"],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],

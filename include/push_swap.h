@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:35:07 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:22:23 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 15:33:18 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	clean_lst(void *content);
 
 /// msg///
 void	msg(const char *message);
-void	error_msg(const char *message);
+void	error_msg();
 
 /// sorts///
 void	rotate_low_value(t_list **lst);
