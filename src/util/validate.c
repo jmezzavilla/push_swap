@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:35:33 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 15:46:31 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:14:06 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,24 @@ void	check_args(int ac, char **av)
 			error_msg();
 		i++;
 	}
+}
+
+void	check_sort(t_list *lst)
+{
+	t_list	*temp_lst;
+	t_item	*current;
+	t_item	*next;
+
+	temp_lst = lst;
+	while (temp_lst && temp_lst->next)
+	{
+		current = temp_lst->content;
+		next = temp_lst->next->content;
+		if (current->nbr > next->nbr)
+			return ;
+		temp_lst = temp_lst->next;
+	}
+	ft_lstclear(&lst, clean_lst);
+	exit(EXIT_SUCCESS);
 }
 

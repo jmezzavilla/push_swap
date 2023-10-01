@@ -6,19 +6,19 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 21:07:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:26:46 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:43:08 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	reverse_rotate(t_list **stack)
+void	reverse_rotate(t_list **lst)
 {
 	t_list	*current;
 
-	current = ft_lstlast(*stack);
-	ft_lstadd_front(stack, ft_lstnew(current->content));
-	ft_lstdellast(stack);
+	current = ft_lstlast(*lst);
+	ft_lstadd_front(lst, ft_lstnew(current->content));
+	ft_lstdellast(lst);
 }
 
 void	rra(t_list **lst)

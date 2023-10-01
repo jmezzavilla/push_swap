@@ -6,13 +6,13 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 19:05:53 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 11:30:24 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:17:50 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	get_bf_nbr(t_item *item_b, t_list **lst_a)
+void	find_bf_nbr(t_item *item_b, t_list **lst_a)
 {
 	t_item	*item_a;
 	t_list	*current_a;
@@ -27,7 +27,7 @@ void	get_bf_nbr(t_item *item_b, t_list **lst_a)
 		temp = item_a->nbr - item_b->nbr;
 		if (temp < bf && item_a->nbr > item_b->nbr)
 		{
-			item_b->bff = item_a->nbr - item_b->nbr;
+			item_b->bf_result = item_a->nbr - item_b->nbr;
 			item_b->bf = item_a->nbr;
 			bf = temp;
 		}
@@ -35,7 +35,7 @@ void	get_bf_nbr(t_item *item_b, t_list **lst_a)
 	}
 }
 
-void	get_bf(t_list **lst_a, t_list **lst_b)
+void	find_bf(t_list **lst_a, t_list **lst_b)
 {
 	t_item	*item_b;
 	t_list	*current_b;
@@ -44,7 +44,7 @@ void	get_bf(t_list **lst_a, t_list **lst_b)
 	while (current_b)
 	{
 		item_b = current_b->content;
-		get_bf_nbr(item_b, lst_a);
+		find_bf_nbr(item_b, lst_a);
 		item_b->cost = find_cost(lst_b, item_b->nbr);
 		item_b->cost_bf = find_cost(lst_a, item_b->bf);
 		current_b = current_b->next;
@@ -57,7 +57,7 @@ void	do_sort(t_list **lst_a, t_list **lst_b)
 
 	while (*lst_b)
 	{
-		get_bf(lst_a, lst_b);
+		find_bf(lst_a, lst_b);
 		item = lowest_cost(*lst_b);
 		if (item->cost > 0)
 			rotate_to_top(lst_b, item->nbr, 2);

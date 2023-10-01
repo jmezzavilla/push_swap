@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:23:15 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 16:33:08 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:43:20 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,7 @@ int	main(int ac, char **av)
 
 	list_a = NULL;
 	list_b = NULL;
-	check_args(ac, av);
-	create_stack(av, &list_a);
-	check_sort(list_a);
+	build_lst(ac, av, &list_a);
 	sort(&list_a, &list_b);
 	ft_lstclear(&list_a, clean_lst);
 	return (EXIT_SUCCESS);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   stacks.c                                           :+:      :+:    :+:   */
+/*   lsts.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:42:36 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 16:33:57 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:18:10 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ t_item	*create_item(int nbr)
 	return (item);
 }
 
-void	create_stack(char **str, t_list **lst)
+void	build_lst_itens(char **str, t_list **lst)
 {
 	int	i;
 
@@ -36,23 +36,11 @@ void	create_stack(char **str, t_list **lst)
 	}
 }
 
-void	check_sort(t_list *lst)
+void	build_lst(int ac, char **str, t_list **lst)
 {
-	t_list	*temp_lst;
-	t_item	*current;
-	t_item	*next;
-
-	temp_lst = lst;
-	while (temp_lst && temp_lst->next)
-	{
-		current = temp_lst->content;
-		next = temp_lst->next->content;
-		if (current->nbr > next->nbr)
-			return ;
-		temp_lst = temp_lst->next;
-	}
-	ft_lstclear(&lst, clean_lst);
-	exit(EXIT_SUCCESS);
+	check_args(ac, str);
+	build_lst_itens(str, lst);
+	check_sort(*lst);
 }
 
 void	rotate_low_value(t_list **lst)

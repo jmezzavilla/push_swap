@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:35:07 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 16:33:18 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/09/30 19:43:08 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 typedef struct s_item
 {
 	int	bf;
-	int	bff;
+	int	bf_result;
 	int	cost;
 	int	cost_bf;
 	int	nbr;
@@ -39,7 +39,7 @@ void	sb(t_list **lst);
 void	ss(t_list **lst_a, t_list **lst_b);
 
 /// utils///
-void	create_stack(char **str, t_list **lst);
+void	build_lst(int ac, char **str, t_list **lst);
 void	check_sort(t_list *lst);
 void	check_args(int ac, char **av);
 float	average(t_list *lst);
@@ -51,7 +51,7 @@ void	clean_lst(void *content);
 
 /// msg///
 void	msg(const char *message);
-void	error_msg();
+void	error_msg(void);
 
 /// sorts///
 void	rotate_low_value(t_list **lst);
