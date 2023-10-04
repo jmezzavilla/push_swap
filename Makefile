@@ -6,7 +6,7 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/09/30 15:48:55 by jealves-         ###   ########.fr        #
+#    Updated: 2023/10/05 00:51:30 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,7 @@ INCLUDE_LIB = $(DIR_LIBFT)/include
 LIB = $(DIR_LIBFT)/libft.a
 
 CFLAGS = -g -Wall -I $(INCLUDES) -I $(INCLUDE_LIB) -Wextra -Werror #-fsanitize=address
-RM= rm -rf
+RM= @rm -f
 
 OBJ = $(patsubst %.c,%.o,$(SRC))
 
@@ -42,7 +42,7 @@ OBJ = $(patsubst %.c,%.o,$(SRC))
 	@printf "$(PROJECT) compiling $(BLUE)$<$(RESET)\n"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
-all : $(MLX_LIB) $(NAME)
+all : $(NAME)
 
 lib : 
 	@make -C $(DIR_LIBFT)
@@ -52,16 +52,16 @@ $(NAME) : lib $(OBJ) $(LIB)
 	@printf "$(PROJECT) $(GREEN)compiled$(RESET)!\n"
 
 
-$(MLX_LIB):
-	@make -C $(MLX_DIR)
-
-
 clean :
 	$(RM) $(OBJ)
 	make -C $(DIR_LIBFT)  clean
+	@for file in $(OBJ); do \
+        echo "$(PROJECT) deleting $(YELLOW) $$file $(RESET)!"; \
+    done
 	
 fclean : clean
 	$(RM) $(NAME)
+	@printf "$(PROJECT) $(YELLOW) deleting $(NAME) $(RESET)!\n"
 	make -C $(DIR_LIBFT) fclean
 	
 	
