@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:23:15 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 19:43:20 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/04 23:54:42 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ int	main(int ac, char **av)
 	list_b = NULL;
 	build_lst(ac, av, &list_a);
 	sort(&list_a, &list_b);
+	print_list(list_a);
 	ft_lstclear(&list_a, clean_lst);
 	return (EXIT_SUCCESS);
 }

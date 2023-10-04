@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 17:35:33 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 19:14:06 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/05 00:05:11 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,13 @@ void	check_args(int ac, char **av)
 		error_msg();
 	while (av[i])
 	{
-		if (!ft_ispositive(av[i]))
+		if (!ft_isnumber(av[i]))
 			error_msg();
 		if (ft_rep_num(ft_atoi(av[i]), av, i + 1))
 			error_msg();
-		if(INT_MAX < ft_atoi_long(av[i]))
+		if(INT_MIN >= ft_atoi_long(av[i]))
+			error_msg();
+		if(INT_MAX <= ft_atoi_long(av[i]))
 			error_msg();
 		i++;
 	}

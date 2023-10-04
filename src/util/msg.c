@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 22:18:02 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 15:32:55 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/04 23:55:58 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error_msg()
 {
-	ft_printf("Error\n");
+	ft_putstr_fd("Error\n",2);
 	exit(EXIT_FAILURE);
 }
 
