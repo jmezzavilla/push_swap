@@ -6,7 +6,7 @@
 #    By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/05 00:18:43 by jealves-          #+#    #+#              #
-#    Updated: 2023/10/05 00:51:30 by jealves-         ###   ########.fr        #
+#    Updated: 2023/10/05 16:52:50 by jealves-         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,7 @@ OBJ = $(patsubst %.c,%.o,$(SRC))
 all : $(NAME)
 
 lib : 
-	@make -C $(DIR_LIBFT)
+	@make -s -C $(DIR_LIBFT)
 
 $(NAME) : lib $(OBJ) $(LIB)
 	@$(CC) $(CFLAGS) $(OBJ) $(LIB) -o $(NAME)
@@ -53,16 +53,16 @@ $(NAME) : lib $(OBJ) $(LIB)
 
 
 clean :
+	@make -s -C $(DIR_LIBFT)  clean
 	$(RM) $(OBJ)
-	make -C $(DIR_LIBFT)  clean
 	@for file in $(OBJ); do \
         echo "$(PROJECT) deleting $(YELLOW) $$file $(RESET)!"; \
     done
 	
 fclean : clean
+	@make -s -C $(DIR_LIBFT) fclean
 	$(RM) $(NAME)
 	@printf "$(PROJECT) $(YELLOW) deleting $(NAME) $(RESET)!\n"
-	make -C $(DIR_LIBFT) fclean
 	
 	
 re : fclean all
