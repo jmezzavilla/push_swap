@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/26 21:54:38 by jealves-          #+#    #+#             */
-/*   Updated: 2023/09/30 10:11:03 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/05 23:55:27 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ int	find_cost(t_list **lst, int nbr)
 		return (index);
 }
 
-float	average(t_list *lst)
+long	average(t_list *lst)
 {
 	t_item	*item;
 	t_list	*current;
@@ -95,5 +95,5 @@ float	average(t_list *lst)
 		sum += item->nbr;
 		current = current->next;
 	}
-	return ((float)sum / ft_lstsize(lst));
+	return ((long)sum / ft_lstsize(lst));
 }
