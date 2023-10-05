@@ -6,7 +6,7 @@
 /*   By: jealves- <jealves-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/20 12:35:07 by jealves-          #+#    #+#             */
-/*   Updated: 2023/10/05 23:55:32 by jealves-         ###   ########.fr       */
+/*   Updated: 2023/10/06 00:45:35 by jealves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ void	ss(t_list **lst_a, t_list **lst_b);
 void	build_lst(int ac, char **str, t_list **lst);
 void	check_sort(t_list *lst);
 void	check_args(int ac, char **av);
-long		average(t_list *lst);
+long	average(t_list *lst);
 int		find_cost(t_list **lst, int nbr);
 int		find_lowest_value(t_list *lst);
 t_item	*lowest_cost(t_list *lst);
